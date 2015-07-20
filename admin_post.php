@@ -10,11 +10,15 @@ catch(PDOException $e)
 	echo $e->getMessage();
 }?>
 <?php
+SESSION_START();
+if(isset($_SESSION['uid']))
+{
 	$post=$_POST['zpost'];
 	$img=$_POST['zimg'];
-	$sql="INSERT INTO posts(post,img,date) VALUE ('$post','$img',NOW())";
+	$sql="INSERT INTO posts(post,img,date,auther_id) VALUE ('$post','$img',NOW(),'".$_SESSION['uid']."')";
 	$cx ->exec($sql);
 	echo "提交成功";
+
 	echo "<script language=\"javascript\">
 var i=1;
 function ref(){
@@ -27,6 +31,9 @@ setTimeout(\"ref()\",1000);
 ref();
 </script>";
 	$cx=null;	
+}	
+	else 
+	echo" 没有权限";
 
 ?>
 

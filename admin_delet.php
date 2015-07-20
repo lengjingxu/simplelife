@@ -10,6 +10,9 @@ catch(PDOException $e)
 	echo $e->getMessage();
 }?>
 <?php
+SESSION_START();
+if(isset($_SESSION['uid']))
+{ 
 	$deleteid=$_GET['id'];
 	$sql="DELETE FROM posts WHERE post_id=".$deleteid;
 	$nb=$cx ->exec($sql);
@@ -25,7 +28,10 @@ setTimeout(\"ref()\",1000);
 }
 ref();
 </script>";
-	$cx=null;	
+	$cx=null;
+
+}else 
+	echo" 没有权限";	
 
 ?>
 
