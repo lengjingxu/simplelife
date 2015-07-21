@@ -63,23 +63,33 @@
           </a>
         </div>
         <div class="demo-blog__posts mdl-grid">
-          <div class=" mdl-cell--12-col">
             <div class="mdl-card__media mdl-color-text--grey-50">
               <h3>title</h3>
             </div>
-            <div>
+			
               
-				<iframe  name="post" frameborder="0"></iframe>
+				
 				<?php 
 				SESSION_START();
 				if(isset($_SESSION['uid']))
 				{ echo "
-
-				<form action=\"admin_post.php\" method=\"post\" target=\"post\">
-				Post: <input type=\"text\" name=\"zpost\" />
-				IMG: <input type=\"text\" name=\"zimg\" />
-				<input type=\"submit\" />
-				</form>";
+				<div class=\"mdl-card mdl-cell mdl-cell--12-col\">
+					<iframe  name=\"post\" frameborder=\"0\"></iframe>
+			   
+					<form action=\"admin_post.php\" method=\"post\" target=\"post\">
+						<div class=\"mdl-textfield mdl-js-textfield\">
+						
+						<textarea class=\"mdl-textfield__input\" type=\"text\" name=\"zpost\"  rows= \"3\" id=\"posttext\" ></textarea>
+						<label class=\"mdl-textfield__label\" for=\"posttext\">Text lines...</label>
+						
+						<br>IMG: <input type=\"url\" name=\"zimg\" />
+						<input type=\"submit\" />
+						
+						</div>
+					</form>
+				 </div>
+				 ";
+				
 				while($article=$posts->fetch()){
 					echo "<div class='mdl-card mdl-cell mdl-cell--12-col'>
 							<div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(\'".$article['img']."\');'>
@@ -90,11 +100,14 @@
 							</div>";
 					echo "<div class=\"mdl-card__supporting-text meta mdl-color-text--grey-600\">
 							  <div class=\"minilogo\"></div>
-							  <div>
+							  <div >
 								<strong>".$article['auther_id']."</strong>
 								<span>".$article['date']."</span>
-								<a href=admin_delet.php?id=".$article['post_id']." target='post'>删除</a>
-
+								<a href=admin_delet.php?id=".$article['post_id']." target='post'><button class=\"mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored\">
+								  <i class=\"material-icons\">remove</i>
+								</button>
+								</a>
+								
 							  </div>
 							</div>
 						  </div>";
@@ -117,7 +130,6 @@
              
                  
           </div>
-		</div> 
       </main>
     </div>
  
