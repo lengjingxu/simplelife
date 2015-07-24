@@ -87,11 +87,11 @@ if(isset($_SESSION['uid']))
 						
 						<textarea class=\"mdl-textfield__input\" type=\"text\" name=\"zpost\"  rows= \"3\" id=\"posttext\" ></textarea>
 						<label class=\"mdl-textfield__label\" for=\"posttext\">Text lines...</label>
-						</div>
+						
 						<br><br>IMG: <input type=\"url\" name=\"zimg\" />
 						<input type=\"submit\" />
 						
-						
+						</div>
 					</form>
 				 </div>
 				

@@ -20,11 +20,11 @@ body::before {
     position: fixed;
 }
 
-body .life-blog {
+body .demo-blog {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
-.life-blog .life-blog__posts {
+.demo-blog .demo-blog__posts {
   max-width: 900px;
   padding: 0;
   display: -webkit-box;
@@ -38,12 +38,12 @@ body .life-blog {
           flex-shrink: 0;
 }
 
-.life-blog.mdl-layout .mdl-layout__content {
+.demo-blog.mdl-layout .mdl-layout__content {
   padding-top: 230px;
   position: relative;
   -webkit-overflow-scrolling: touch;
 }
-.life-blog .mdl-card {
+.demo-blog .mdl-card {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -59,14 +59,14 @@ body .life-blog {
           align-items: stretch;
   min-height: 360px;
 }
-.life-blog .mdl-card__title {
+.demo-blog .mdl-card__title {
   padding: 16px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-.life-blog .mdl-card__media {
+.demo-blog .mdl-card__media {
   box-sizing: border-box;
   background-size: cover;
   padding: 24px;
@@ -89,11 +89,11 @@ body .life-blog {
           align-items: flex-end;
 /*  cursor: pointer;*/
 }
-.life-blog .mdl-card__media a,
-.life-blog .mdl-card__title a {
+.demo-blog .mdl-card__media a,
+.demo-blog .mdl-card__title a {
   color: inherit;
 }
-.life-blog .mdl-card__supporting-text {
+.demo-blog .mdl-card__supporting-text {
   width: 100%;
   padding: 16px;
   min-height: 64px;
@@ -106,24 +106,24 @@ body .life-blog {
       -ms-flex-align: center;
           align-items: center;
 }
-.life-blog .mdl-card__supporting-text strong {
+.demo-blog .mdl-card__supporting-text strong {
   font-weight: 400;
 }
-.life-blog .mdl-card__media ~ .mdl-card__supporting-text {
+.demo-blog .mdl-card__media ~ .mdl-card__supporting-text {
   min-height: 64px;
 }
-.life-blog .mdl-card__supporting-text:not(:last-child) {
+.demo-blog .mdl-card__supporting-text:not(:last-child) {
   box-sizing: border-box;
   min-height: 76px;
 }
-.life-blog:not(.life-blog--blogpost) .mdl-card__supporting-text ~ .mdl-card__supporting-text {
+.demo-blog:not(.demo-blog--blogpost) .mdl-card__supporting-text ~ .mdl-card__supporting-text {
   border-top: 1px solid rgba(0,0,0,0.1);
 }
 
-.life-blog .mdl-card__actions:first-child {
+.demo-blog .mdl-card__actions:first-child {
   margin-left: 0;
 }
-.life-blog .meta {
+.demo-blog .meta {
   box-sizing: border-box;
   padding: 16px;
   display: -webkit-box;
@@ -145,7 +145,7 @@ body .life-blog {
           justify-content: flex-start;
   height: auto;
 }
-.life-blog .meta > .meta__favorites{
+.demo-blog .meta > .meta__favorites{
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -155,21 +155,21 @@ body .life-blog {
   font-size: 13px;
   font-weight: 500;
 }
-.life-blog .meta > .meta__favorites .material-icons {
+.demo-blog .meta > .meta__favorites .material-icons {
   font-size: 2em;
   cursor: pointer;
   margin-left: 12px;
 }
-.life-blog .mdl-card .meta.meta--fill {
+.demo-blog .mdl-card .meta.meta--fill {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.life-blog .meta > *:first-child {
+.demo-blog .meta > *:first-child {
   margin-right: 16px;
 }
-.life-blog .meta > * {
+.demo-blog .meta > * {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -180,22 +180,22 @@ body .life-blog {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.life-blog.is-small-screen .life-blog__posts > .mdl-card.coffee-pic {
+.demo-blog.is-small-screen .demo-blog__posts > .mdl-card.coffee-pic {
   -webkit-box-ordinal-group: 1;
   -webkit-order: 0;
       -ms-flex-order: 0;
           order: 0;
 }
-.life-blog.is-small-screen .life-blog__posts > .mdl-card.something-else {
+.demo-blog.is-small-screen .demo-blog__posts > .mdl-card.something-else {
   -webkit-box-ordinal-group: 0;
   -webkit-order: -1;
       -ms-flex-order: -1;
           order: -1;
 }
-.life-blog .coffee-pic .mdl-card__media {
+.demo-blog .coffee-pic .mdl-card__media {
   background-image: url('../images/coffee.jpg');
 }
-.life-blog .something-else .mdl-card__media {
+.demo-blog .something-else .mdl-card__media {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -214,7 +214,7 @@ body .life-blog {
       -ms-flex-align: center;
           align-items: center;
 }
-.life-blog .something-else > button {
+.demo-blog .something-else > button {
   position: absolute;
   top: 0;
   right: 28px;
@@ -222,29 +222,29 @@ body .life-blog {
       -ms-transform: translate(0px, -28px);
           transform: translate(0px, -28px);
 }
-.life-blog .something-else .mdl-card__media {
+.demo-blog .something-else .mdl-card__media {
   font-size: 13px;
   font-weight: 500;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
-.life-blog .something-else .mdl-card__media img {
+.demo-blog .something-else .mdl-card__media img {
   width: 64px;
   height: 64px;
   margin-bottom: 10px;
 }
-.life-blog .something-else .mdl-card__supporting-text {
+.demo-blog .something-else .mdl-card__supporting-text {
   background-color: #F5F5F5;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.life-blog .on-the-road-again .mdl-card__media {
+.demo-blog .on-the-road-again .mdl-card__media {
   background-image: url('../images/road.jpg');
 }
-.life-blog .shopping .mdl-card__media {
+.demo-blog .shopping .mdl-card__media {
   background-image: url('../images/shopping.jpg');
 }
-.life-blog .life-blog__posts > .life-nav {
+.demo-blog .demo-blog__posts > .demo-nav {
   margin: 12px 15px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -266,59 +266,59 @@ body .life-blog {
   color: white;
   font-weight: 500;
 }
-.life-blog .life-blog__posts > .life-nav > .life-nav__button {
+.demo-blog .demo-blog__posts > .demo-nav > .demo-nav__button {
   color: white;
   text-decoration: none;
 }
-.life-blog .life-blog__posts > .life-nav .mdl-button {
+.demo-blog .demo-blog__posts > .demo-nav .mdl-button {
   color: rgba(0,0,0,0.54);
   background-color: white;
 }
-.life-blog .life-blog__posts > .life-nav > .life-nav__button:first-child .mdl-button {
+.demo-blog .demo-blog__posts > .demo-nav > .demo-nav__button:first-child .mdl-button {
   margin-right: 16px;
 }
-.life-blog .life-blog__posts > .life-nav > .life-nav__button:last-child .mdl-button {
+.demo-blog .demo-blog__posts > .demo-nav > .demo-nav__button:last-child .mdl-button {
   margin-left: 16px;
 }
-.life-blog .mdl-card > a {
+.demo-blog .mdl-card > a {
   color: inherit;
   text-decoration: none;
   font-weight: inherit;
 }
-.life-blog .mdl-card h3 {
+.demo-blog .mdl-card h3 {
   margin: 0;
 }
-.life-blog .mdl-card h3 a {
+.demo-blog .mdl-card h3 a {
   text-decoration: none;
 }
-.life-blog .mdl-card h3.quote:before, .life-blog .mdl-card h3.quote:after {
+.demo-blog .mdl-card h3.quote:before, .demo-blog .mdl-card h3.quote:after {
   display: block;
   font-size: 3em;
   margin-top: 0.5em;
 }
-.life-blog .mdl-card h3.quote:before {
+.demo-blog .mdl-card h3.quote:before {
   content: '“';
 }
-.life-blog .mdl-card h3.quote:after {
+.demo-blog .mdl-card h3.quote:after {
   content: '”';
 }
-.life-blog--blogpost .custom-header {
+.demo-blog--blogpost .custom-header {
   background-color: transparent;
 }
-.life-blog--blogpost .life-blog__posts > .mdl-card .mdl-card__media {
+.demo-blog--blogpost .demo-blog__posts > .mdl-card .mdl-card__media {
   background-image: url('../images/road_big.jpg');
   height: 280px;
 }
-.life-blog--blogpost .comments {
+.demo-blog--blogpost .comments {
   background-color: #EEE;
 }
-.life-blog--blogpost .meta > * {
-/*   -webkit-box-align: center;
+.demo-blog--blogpost .meta > * {
+  -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; */
+          align-items: center;
 }
-.life-blog--blogpost .meta + .mdl-card__supporting-text {
+.demo-blog--blogpost .meta + .mdl-card__supporting-text {
   border: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -330,14 +330,14 @@ body .life-blog {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.life-blog--blogpost .meta + .mdl-card__supporting-text p {
+.demo-blog--blogpost .meta + .mdl-card__supporting-text p {
   max-width: 512px;
   margin: 16px auto;
   font-size: 16px;
   line-height: 28px;
 }
 
-.life-blog--blogpost .comments {
+.demo-blog--blogpost .comments {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -358,7 +358,7 @@ body .life-blog {
   padding: 32px;
   box-sizing: border-box;
 }
-.life-blog--blogpost .comments > form {
+.demo-blog--blogpost .comments > form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -366,7 +366,7 @@ body .life-blog {
   flex-diretion: row;
   margin-bottom: 16px;
 }
-.life-blog--blogpost .comments > form .mdl-textfield {
+.demo-blog--blogpost .comments > form .mdl-textfield {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
@@ -377,19 +377,19 @@ body .life-blog {
 /* Workaround for Firefox.
  * User agent stylesheet kept overwriting the font in FF only.
  */
-.life-blog--blogpost .comments > form .mdl-textfield .mdl-textfield__input {
+.demo-blog--blogpost .comments > form .mdl-textfield .mdl-textfield__input {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
-.life-blog--blogpost .comments > form .mdl-textfield input,
-.life-blog--blogpost .comments > form .mdl-textfield textarea {
+.demo-blog--blogpost .comments > form .mdl-textfield input,
+.demo-blog--blogpost .comments > form .mdl-textfield textarea {
   resize: none;
 }
-.life-blog--blogpost .comments > form button {
+.demo-blog--blogpost .comments > form button {
   margin-top: 20px;
   background-color: rgba(0, 0, 0, 0.24);
   color: white;
 }
-.life-blog--blogpost .comments .comment {
+.demo-blog--blogpost .comments .comment {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -404,7 +404,7 @@ body .life-blog {
       -ms-flex-align: stretch;
           align-items: stretch;
 }
-.life-blog--blogpost .comments .comment > .comment__header {
+.demo-blog--blogpost .comments .comment > .comment__header {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -420,13 +420,13 @@ body .life-blog {
           align-items: center;
   margin-bottom: 16px;
 }
-.life-blog--blogpost .comments .comment > .comment__header > .comment__avatar {
+.demo-blog--blogpost .comments .comment > .comment__header > .comment__avatar {
   width: 48px;
   height: 48px;
   border-radius: 24px;
   margin-right: 16px;
 }
-.life-blog--blogpost .comments .comment > .comment__header > .comment__author {
+.demo-blog--blogpost .comments .comment > .comment__header > .comment__author {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
@@ -441,10 +441,10 @@ body .life-blog {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.life-blog--blogpost .comments .comment > .comment__text {
+.demo-blog--blogpost .comments .comment > .comment__text {
   line-height: 1.5em;
 }
-.life-blog--blogpost .comments .comment > .comment__actions {
+.demo-blog--blogpost .comments .comment > .comment__actions {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -465,36 +465,36 @@ body .life-blog {
   font-size: 0.8em;
   margin-top: 16px;
 }
-.life-blog--blogpost .comments .comment > .comment__actions button {
+.demo-blog--blogpost .comments .comment > .comment__actions button {
   margin-right: 16px;
   color: rgba(0, 0, 0, 0.24);
 }
-.life-blog--blogpost .comments .comment > .comment__answers {
+.demo-blog--blogpost .comments .comment > .comment__answers {
   padding-top: 32px;
   padding-left: 48px;
 }
 
-.life-blog--blogpost .life-back {
+.demo-blog--blogpost .demo-back {
   position: absolute;
   top: 16px;
   left: 16px;
   color: white;
   z-index: 9999;
 }
-.life-blog .section-spacer {
+.demo-blog .section-spacer {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-.life-blog .something-else {
+.demo-blog .something-else {
   overflow: visible;
   z-index: 10;
 }
-.life-blog .amazing .mdl-card__title {
+.demo-blog .amazing .mdl-card__title {
   background-color: #263238;
 }
-.life-blog .minilogo {
+.demo-blog .minilogo {
   width: 44px;
   height: 44px;
   background-image: url('../images/avatar.png');
@@ -539,7 +539,7 @@ body .life-blog {
   background: transparent;
 }
 
-.life-blog .mdl-mini-footer {
+.demo-blog .mdl-mini-footer {
   margin-top: 80px;
   height: 120px;
   padding: 40px;
@@ -549,42 +549,4 @@ body .life-blog {
           align-items: center;
   background-color: white;
   box-sizing: border-box;
-}
-.mdl-card {
-overflow: initial;
-}
-
-#delete{
-position: absolute;
-  top: 0;
-  right: 28px;
-  -webkit-transform: translate(0px, -28px);
-  -ms-transform: translate(0px, -28px);
-  transform: translate(0px, -28px);
-}
-
-.mdl-textfield {
-  position: relative;
-  font-size: 16px;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 100%;
-  margin: 0;
-  padding: 20px;
-}
-
-.mdl-textfield__label {
-  bottom: 0;
-  color: rgba(0,0,0,.26);
-  font-size: 16px;
-  left: 0;
-  right: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 24px;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-align: left;
-  padding:20px;
 }

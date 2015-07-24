@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -20,13 +21,10 @@
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
-
- 
-
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/material.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/frondend/css/material.min.css">
+    <link rel="stylesheet" href="/frondend/css/styles.css">
     <style>
     #view-source {
       position: fixed;
@@ -40,29 +38,19 @@
     </style>
   </head>
   <body>
-  <?php include 'sql.php';
-try{
-	$cx=new PDO("mysql:host=$sql;dbname=life",$username,$psw);	
-	
-	$cx->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$sql='SELECT post_id,post,img,date,auther_id FROM posts';
-	$posts=$cx->query($sql);
-	$posts->setFetchMode(PDO::FETCH_ASSOC);
-
-	}
-catch(PDOException $e)
-{
-	echo $e->getMessage();
-}
-$cx=null;	
-
-?>
-    <div class="life-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+    <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
-        <div class="life-blog__posts mdl-grid">
+        <div class="demo-blog__posts mdl-grid">
           <div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3>Coffee Pic</h3>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong>The Newist</strong>
+                <span>2 days ago</span>
+              </div>
+            </div>
+              <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3><a href="entry.html">Coffee Pic</a></h3>
             </div>
             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
               <div class="minilogo"></div>
@@ -93,33 +81,26 @@ $cx=null;
               </button>
             </div>
           </div>
-		  
-		  	<?php while($article=$posts->fetch()){
-	echo "<div class='mdl-card mdl-cell mdl-cell--12-col'>
-            <div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(\'".$article['img']."\');'>
-              <h3>On the road again</h3>
-            </div>";
-	echo "<div class=\"mdl-color-text--grey-600 mdl-card__supporting-text\">"
-             .$article['post']."
-            </div>";
-	echo "<div class=\"mdl-card__supporting-text meta mdl-color-text--grey-600\">
-              <div class=\"minilogo\"></div>
+          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3><a href="entry.html">On the road again</a></h3>
+            </div>
+            <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
+              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
               <div>
-                <strong>".$article['auther_id']."</strong>
-                <span>".$article['date']."</span>
+                <strong>The Newist</strong>
+                <span>2 days ago</span>
               </div>
             </div>
-          </div>";
-	
-	}
-	?>
-          
+          </div>
 
 
-
-          <nav class="life-nav mdl-cell mdl-cell--12-col">
+          <nav class="demo-nav mdl-cell mdl-cell--12-col">
             <div class="section-spacer"></div>
-            <a href="entry.html" class="life-nav__button">
+            <a href="entry.html" class="demo-nav__button">
               More
               <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                 <i class="material-icons">arrow_forward</i>
@@ -140,8 +121,8 @@ $cx=null;
       </main>
       <div class="mdl-layout__obfuscator"></div>
     </div>
-    
-    <script src="./js/material.min.js"></script>
+
+    <script src="/frondend/js/material.min.js"></script>
   </body>
   <script>
     Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
