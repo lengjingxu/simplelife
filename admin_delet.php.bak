@@ -17,7 +17,7 @@ if(isset($_SESSION['uid']))
 	$sql="DELETE FROM posts WHERE post_id=".$deleteid;
 	$nb=$cx ->exec($sql);
 	echo '
-<div id="popup1" class="overlay" style="visibility: visible;
+<div id="popup1" class="overlay" style="  visibility: visible;
   opacity: 1;">
 		
 </div>';

@@ -1,5 +1,8 @@
 <!doctype html>
-<?php SESSION_START(); ?>
+<?php SESSION_START();
+
+
+ ?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -28,19 +31,32 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/material.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-    </style>
+
   </head>
   <body>
+ <?php if(@$_GET['login'] == "out"){
+    unset($_SESSION['uid']);
+    echo '
+	<div id="popup1" class="overlay" style="  visibility: visible;
+  opacity: 1;">
+		<div class="mdl-card mdl-shadow--2dp life-card-square popup">
+		  <div class="mdl-card__title mdl-card--expand">
+			<h2 class="mdl-card__title-text">LogOut</h2>
+		  </div>
+		  <div class="mdl-card__supporting-text">
+			<div class="content"><p>注销登录成功</p></div>
+		  </div>
+		<div class="mdl-card__actions mdl-card--border">
+			<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple" href="admin.php">
+			登录
+			<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span>
+			</span>
+			</a>
+		</div>		
+	</div>';
+    exit;
+}
+?>
   <?php include 'sql.php';
 				try{
 					$cx=new PDO("mysql:host=$sql;dbname=life",$username,$psw);	
@@ -76,7 +92,7 @@ if(isset($_SESSION['uid']))
         <div class=\"life-blog__posts mdl-grid\">
             <div class=\"mdl-card__media mdl-color-text--grey-50\">
               <iframe  name=\"post\" frameborder=\"0\"></iframe>
-			  <a href=\"?login=out \"> 退出</a>
+			  <a href=\"admin.php?login=out \"> 退出</a>
 
             </div>
 				<div class=\"mdl-card mdl-cell mdl-cell--12-col\">
