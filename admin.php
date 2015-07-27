@@ -98,24 +98,28 @@ if(isset($_SESSION['uid']))
 				<div class=\"mdl-card mdl-cell mdl-cell--12-col\">
 					
 			   
-					<form action=\"admin_post.php\" method=\"post\" target=\"post\">
+					<form action=\"admin_post.php?submit=1\" method=\"post\" target=\"post\" enctype=\"multipart/form-data\">
 						<div class=\"mdl-textfield mdl-js-textfield\">
 						
 						<textarea class=\"mdl-textfield__input\" type=\"text\" name=\"zpost\"  rows= \"3\" id=\"posttext\" ></textarea>
 						<label class=\"mdl-textfield__label\" for=\"posttext\">Text lines...</label>
 						</div>
-						<br><br>IMG: <input type=\"url\" name=\"zimg\" />
-						<input type=\"submit\" />
+Send this file: <input name=\"filename\" type=\"file\">  
+
+						<input type=\"submit\" /> 
 						
 						
 					</form>
-				 </div>
+			 </div>
 				
 				 ";
+				 
+				 
+				 
 				
 				while($article=$posts->fetch()){
 					echo "<div class='mdl-card mdl-cell mdl-cell--12-col'>
-							<div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(\'".$article['img']."\');'>
+							<div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(".$article['img'].");'>
 							  <h3></h3>
 							</div>";
 					echo "<div class=\"mdl-color-text--grey-600 mdl-card__supporting-text\">"
@@ -143,9 +147,7 @@ if(isset($_SESSION['uid']))
 					echo "</div>";
 				}	;  
 	
-/*  			if ($_GET['login']='out') 
-				unset($_SESSION['uid'])
-			;  */
+
 	?>
 	
 				

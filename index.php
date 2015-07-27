@@ -45,7 +45,7 @@ try{
 	$cx=new PDO("mysql:host=$sql;dbname=life",$username,$psw);	
 	
 	$cx->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$sql='SELECT post_id,post,img,date,auther_id FROM posts';
+	$sql='SELECT post_id,post,img,date,auther_id FROM posts ORDER BY 1 DESC';
 	$posts=$cx->query($sql);
 	$posts->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -96,9 +96,9 @@ $cx=null;
 		  
 		  	<?php while($article=$posts->fetch()){
 	echo "<div class='mdl-card mdl-cell mdl-cell--12-col'>
-            <div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(\'".$article['img']."\');'>
-              <h3>On the road again</h3>
-            </div>";
+            <div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(".$article['img'].");'>
+			  <h3></h3>
+			</div>";
 	echo "<div class=\"mdl-color-text--grey-600 mdl-card__supporting-text\">"
              .$article['post']."
             </div>";

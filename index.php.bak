@@ -57,9 +57,9 @@ catch(PDOException $e)
 $cx=null;	
 
 ?>
-    <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+    <div class="life-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
-        <div class="demo-blog__posts mdl-grid">
+        <div class="life-blog__posts mdl-grid">
           <div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
             <div class="mdl-card__media mdl-color-text--grey-50">
               <h3>Coffee Pic</h3>
@@ -96,9 +96,9 @@ $cx=null;
 		  
 		  	<?php while($article=$posts->fetch()){
 	echo "<div class='mdl-card mdl-cell mdl-cell--12-col'>
-            <div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(\'".$article['img']."\');'>
-              <h3>On the road again</h3>
-            </div>";
+            <div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(".$article['img'].");'>
+			  <h3></h3>
+			</div>";
 	echo "<div class=\"mdl-color-text--grey-600 mdl-card__supporting-text\">"
              .$article['post']."
             </div>";
@@ -117,9 +117,9 @@ $cx=null;
 
 
 
-          <nav class="demo-nav mdl-cell mdl-cell--12-col">
+          <nav class="life-nav mdl-cell mdl-cell--12-col">
             <div class="section-spacer"></div>
-            <a href="entry.html" class="demo-nav__button">
+            <a href="entry.html" class="life-nav__button">
               More
               <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                 <i class="material-icons">arrow_forward</i>
