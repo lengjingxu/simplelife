@@ -30,7 +30,7 @@ $cx=null;
 		<input class="mdl-textfield__input" type="password" name="zpsw" id="zpsw"/>
 		<label class="mdl-textfield__label" for="zpsw">密码...</label>
 	  </div>
-	<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" />
+	<input class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple" type="submit" />
 </form>
   </div>
   

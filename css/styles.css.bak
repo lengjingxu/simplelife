@@ -570,7 +570,6 @@ position: absolute;
   box-sizing: border-box;
   width: 100%;
   margin: 0;
-  padding: 20px;
 }
 
 .mdl-textfield__label {
@@ -661,4 +660,9 @@ position: absolute;
     color: #fff;
     background:
       url('../images/dog.png') bottom right 15% no-repeat #46B6AC;
+  }
+  
+  .article-add{
+  padding:16px;
+  min-height: inherit!important;
   }

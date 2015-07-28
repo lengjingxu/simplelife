@@ -661,3 +661,9 @@ position: absolute;
     background:
       url('../images/dog.png') bottom right 15% no-repeat #46B6AC;
   }
+  
+  .article-add{
+  padding:16px;
+  min-height: inherit!important;
+  
+  }

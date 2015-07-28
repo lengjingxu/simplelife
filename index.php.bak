@@ -45,7 +45,7 @@ try{
 	$cx=new PDO("mysql:host=$sql;dbname=life",$username,$psw);	
 	
 	$cx->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$sql='SELECT post_id,post,img,date,auther_id FROM posts';
+	$sql='SELECT post_id,post,img,date,auther_id FROM posts ORDER BY 1 DESC';
 	$posts=$cx->query($sql);
 	$posts->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -60,23 +60,12 @@ $cx=null;
     <div class="life-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
         <div class="life-blog__posts mdl-grid">
-          <div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3>Coffee Pic</h3>
-            </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-              <div class="minilogo"></div>
-              <div>
-                <strong>The Newist</strong>
-                <span>2 days ago</span>
-              </div>
-            </div>
-          </div>
+
           <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
-            <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent"><i class="material-icons mdl-color-text--white">add</i></button>
+            
             <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
               <img src="images/logo.png">
-              +1,337
+              Leng
             </div>
             <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
               <div>
@@ -95,9 +84,10 @@ $cx=null;
           </div>
 		  
 		  	<?php while($article=$posts->fetch()){
+				
 	echo "<div class='mdl-card mdl-cell mdl-cell--12-col'>
             <div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(".$article['img'].");'>
-			  <h3></h3>
+			  <h3>".date("m-d",$article['date'])."</h3>
 			</div>";
 	echo "<div class=\"mdl-color-text--grey-600 mdl-card__supporting-text\">"
              .$article['post']."

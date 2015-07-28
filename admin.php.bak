@@ -90,12 +90,12 @@ if(isset($_SESSION['uid']))
           </a>
         </div>
         <div class=\"life-blog__posts mdl-grid\">
-            <div class=\"mdl-card__media mdl-color-text--grey-50\">
+            <div class=\"mdl-color-text--grey-600 mdl-card__supporting-text\">
               <iframe  name=\"post\" frameborder=\"0\"></iframe>
-			  <a href=\"admin.php?login=out \"> 退出</a>
+			  <a href=\"admin.php?login=out \"> <button class=\"mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent\" data-upgraded=\"MaterialButton,MaterialRipple\" id=\"delete\"><i class=\"material-icons mdl-color-text--white\">remove</i><span class=\"mdl-button__ripple-container\"><span class=\"mdl-ripple is-animating\" style=\"width: 160.362463396299px; height: 160.362463396299px; -webkit-transform: translate(-50%, -50%) translate(26px, 25px); transform: translate(-50%, -50%) translate(26px, 25px);\">退出</span></button></a>
 
             </div>
-				<div class=\"mdl-card mdl-cell mdl-cell--12-col\">
+				<div class=\"mdl-card mdl-cell mdl-cell--12-col article-add\">
 					
 			   
 					<form action=\"admin_post.php?submit=1\" method=\"post\" target=\"post\" enctype=\"multipart/form-data\">
@@ -104,9 +104,11 @@ if(isset($_SESSION['uid']))
 						<textarea class=\"mdl-textfield__input\" type=\"text\" name=\"zpost\"  rows= \"3\" id=\"posttext\" ></textarea>
 						<label class=\"mdl-textfield__label\" for=\"posttext\">Text lines...</label>
 						</div>
-Send this file: <input name=\"filename\" type=\"file\">  
-
-						<input type=\"submit\" /> 
+						<input name=\"filename\" type=\"file\">  
+						<br>
+						<br>
+			
+						<input type=\"submit\" class=\"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect\" data-upgraded=\",MaterialButton,MaterialRipple\"/> 
 						
 						
 					</form>
@@ -119,7 +121,7 @@ Send this file: <input name=\"filename\" type=\"file\">
 				
 				while($article=$posts->fetch()){
 					echo "<div class='mdl-card mdl-cell mdl-cell--12-col'>
-							<div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(\'".$article['img']."\');'>
+							<div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(".$article['img'].");'>
 							  <h3></h3>
 							</div>";
 					echo "<div class=\"mdl-color-text--grey-600 mdl-card__supporting-text\">"
