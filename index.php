@@ -84,11 +84,12 @@ $cx=null;
           </div>
 		  
 		  	<?php while($article=$posts->fetch()){
-				
+				$date=$article['date'];
 	echo "<div class='mdl-card mdl-cell mdl-cell--12-col'>
             <div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(".$article['img'].");'>
-			  <h3>".date('m-d',$article['date'])."</h3>
+			  <h3>".date("m",$date)."</h3>
 			</div>";
+			//时间格式化问题
 	echo "<div class=\"mdl-color-text--grey-600 mdl-card__supporting-text\">"
              .$article['post']."
             </div>";
