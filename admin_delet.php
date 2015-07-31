@@ -1,7 +1,7 @@
 
 <?php include 'sql.php';
 try{
-	$cx=new PDO("mysql:host=$sql;dbname=life",$username,$psw);	
+	$cx=new PDO("mysql:host=$sql;dbname=$db",$username,$psw);	
 	$cx->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	}
