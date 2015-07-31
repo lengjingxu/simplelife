@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Material Design Lite</title>
+    <title>Leng‘s Simplelife</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -87,9 +87,8 @@ $cx=null;
 				$date=$article['date'];
 	echo "<div class='mdl-card mdl-cell mdl-cell--12-col'>
             <div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(".$article['img'].");'>
-			  <h3>".date('m',$date)."</h3>
+			  <h3>".date("m",strtotime($date))."</h3>
 			</div>";
-			//时间格式化问题
 	echo "<div class=\"mdl-color-text--grey-600 mdl-card__supporting-text\">"
              .$article['post']."
             </div>";
