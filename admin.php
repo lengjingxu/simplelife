@@ -130,7 +130,6 @@ if(isset($_SESSION['uid']))
 							 .$article['post']."
 							</div>";
 					echo "<div class=\"mdl-card__supporting-text meta mdl-color-text--grey-600\">
-							  <div class=\"minilogo\"></div>
 							  <div >
 								<strong>".$article['auther_id']."</strong>
 								<span>".$article['date']."</span>
