@@ -85,9 +85,10 @@ $cx=null;
 		  
 		  	<?php while($article=$posts->fetch()){
 				$date=$article['date'];
+				$weekarray=array("日","一","二","三","四","五","六");  
 	echo "<div class='mdl-card mdl-cell mdl-cell--12-col'>
             <div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(".$article['img'].");'>
-			  <h3>".date("m月d日",strtotime($date))."</h3>
+			  <h3>".date("m月d日",strtotime($date)).'星期'.$weekarray[date("w")]."</h3>
 			</div>";
 	echo "<div class=\"mdl-color-text--grey-600 mdl-card__supporting-text\">"
              .$article['post']."
