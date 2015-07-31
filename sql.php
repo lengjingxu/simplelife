@@ -1,7 +1,7 @@
 <?php 
 $sql="localhost";
 $username="root";
-$psw=""
+$psw="";
 $db="life";
 ?>
 

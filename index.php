@@ -62,11 +62,12 @@ $cx=null;
         <div class="life-blog__posts mdl-grid">
 
           <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop">
-            
+            <a href="./cv/">
             <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
               <img src="images/logo.png">
-              Leng
+            
             </div>
+			</a>
             <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
               <div>
                 <strong>Paris</strong>
