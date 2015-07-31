@@ -111,7 +111,8 @@ if(isset($_SESSION['uid']))
 						
 						
 					</form>
-			  <a href=\"admin.php?login=out \"> <button class=\"mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent\" data-upgraded=\"MaterialButton,MaterialRipple\" id=\"delete\"><i class=\"material-icons mdl-color-text--white\">remove</i><span class=\"mdl-button__ripple-container\"><span class=\"mdl-ripple is-animating\" style=\"width: 160.362463396299px; height: 160.362463396299px; -webkit-transform: translate(-50%, -50%) translate(26px, 25px); transform: translate(-50%, -50%) translate(26px, 25px);\">退出</span></button></a>
+			  <a href=\"admin.php?login=out \"> <button class=\"mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent\" data-upgraded=\"MaterialButton,MaterialRipple\" id=\"delete\"><i class=\"material-icons mdl-color-text--white\">close</i>
+			  <span class=\"mdl-button__ripple-container\"><span class=\"mdl-ripple is-animating\" style=\"width: 160.362463396299px; height: 160.362463396299px; -webkit-transform: translate(-50%, -50%) translate(26px, 25px); transform: translate(-50%, -50%) translate(26px, 25px);\">退出</span></button></a>
 					
 			 </div>
 				

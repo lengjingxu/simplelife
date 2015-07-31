@@ -61,7 +61,7 @@ $cx=null;
       <main class="mdl-layout__content">
         <div class="life-blog__posts mdl-grid">
 
-          <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
+          <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--12-col-desktop">
             
             <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
               <img src="images/logo.png">
@@ -71,24 +71,27 @@ $cx=null;
               <div>
                 <strong>The Newist</strong>
               </div>
-              <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-                <button class="mdl-menu__item mdl-js-ripple-effect">About</button>
+			 <!-- <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
+                <button class="mdl-menu__item mdl-js-ripple-effect"><a href="http://leng.ninja/">About</a></button>
                 <button class="mdl-menu__item mdl-js-ripple-effect">Message</button>
                 <button class="mdl-menu__item mdl-js-ripple-effect">Favorite</button>
                 <button class="mdl-menu__item mdl-js-ripple-effect">Search</button>
-              </ul>
+              </ul> 
               <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
                 <i class="material-icons">more_vert</i>
               </button>
+			  -->
             </div>
           </div>
 		  
 		  	<?php while($article=$posts->fetch()){
 				$date=$article['date'];
-				$weekarray=array("日","一","二","三","四","五","六");  
+				$weekarray=array("日","一","二","三","四","五","六"); 
+
+				
 	echo "<div class='mdl-card mdl-cell mdl-cell--12-col'>
             <div class='mdl-card__media mdl-color-text--grey-50' style='background-image: url(".$article['img'].");'>
-			  <h3>".date("m月d日",strtotime($date)).星期.$weekarray[date("w")]."</h3>
+			  <h3>".str_replace(str_split('0123456789'), str_split('零一二三四五六七八九',3), trim(str_replace('1十','十',implode('十', str_split(date('n',strtotime($date))))),'0').'月'.trim(str_replace('1十','十',implode('十', str_split(date('d',strtotime($date))))),'0')).'日' ."</h3>
 			</div>";
 	echo "<div class=\"mdl-color-text--grey-600 mdl-card__supporting-text\">"
              .$article['post']."
@@ -108,15 +111,7 @@ $cx=null;
 
 
 
-          <nav class="life-nav mdl-cell mdl-cell--12-col">
-            <div class="section-spacer"></div>
-            <a href="entry.html" class="life-nav__button">
-              More
-              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                <i class="material-icons">arrow_forward</i>
-              </button>
-            </a>
-          </nav>
+         
         </div>
         <footer class="mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">

@@ -87,6 +87,8 @@ body .life-blog {
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
+		    min-height: 460px;
+
 /*  cursor: pointer;*/
 }
 .life-blog .mdl-card__media a,
@@ -227,10 +229,11 @@ body .life-blog {
   font-weight: 500;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+  min-height:360px!important;
 }
 .life-blog .something-else .mdl-card__media img {
-  width: 64px;
-  height: 64px;
+  width: 256px;
+  height: 256px;
   margin-bottom: 10px;
 }
 .life-blog .something-else .mdl-card__supporting-text {
@@ -287,6 +290,7 @@ body .life-blog {
 }
 .life-blog .mdl-card h3 {
   margin: 0;
+     font-family: 'Roboto','Helvetica','FangSong','STFangsong',sans-serif; 
 }
 .life-blog .mdl-card h3 a {
   text-decoration: none;
@@ -665,4 +669,5 @@ position: absolute;
   .article-add{
   padding:16px;
   min-height: inherit!important;
+  
   }
